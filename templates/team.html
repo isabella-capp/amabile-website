@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+     <div class="top-image">
+        <img src="static/media/decoration.png">
+        <div class="text-overlay">
+            <h3>Our Team</h3>
+            <p>Passion and Dedication at Your Service</p>
+        </div>
+    </div>
+
+    <div class="subtitle">
+        <h2>Pronto a scoprire chi c'è dietro Amabile?</h2>
+    </div>
+
+    <div class="team-presentation">
+        {% for member in team_members %}
+            <div class="team-member">
+                <div class="image-wrapper">
+                    <img src="{{ url_for('static', filename=member.image) }}" alt="{{ member.name }}">
+                </div>
+
+                <p>{{ member.name }}</p>
+                <p>{{ member.position }}</p>
+                <p>{{ member.email }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

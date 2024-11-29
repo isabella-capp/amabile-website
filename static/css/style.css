@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Montserrat, sans-serif;
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: #fde9e2;
+    --other-color: rgba(221, 164, 167);
+    --text-color: black;
+}
+
+body, html {
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.nav-wrapper {
+    position: sticky;
+    top: 0; /* Posizionata sempre in alto */
+    left: 0;
+    width: 100%; /* Occupa tutta la larghezza */
+    z-index: 1000;
+
+    background-color: var(--primary-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    flex: 2; /* 20% dello spazio */
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.logo img {
+    max-height: 40px;
+    object-fit: contain;
+}
+
+.nav-links {
+    flex: 7; /* 70% dello spazio */
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Spazio tra i link */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.nav-links a.active, .nav-links a:hover, .active {
+    border-bottom: 2px solid var(--other-color);
+}
+
+.log-in {
+    flex:1;
+    justify-content: flex-end;
+    font-size: 25px;
+    margin-top: 8px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    transition: all 500ms ease;
+    backface-visibility: hidden;
+}
+
+.content {
+    flex: 1;
+    min-height: 100vh;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+    column-gap: 150px;
+    background-color: var(--secondary-color);
+    padding: 50px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-menu h3 {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+
+.footer-menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-menu a:hover {
+    cursor: pointer;
+    color: var(--other-color);
+}
+
+.social-icons {
+    font-size: 25px;
+    margin-top: 5px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    transition: all 500ms ease;
+    backface-visibility: hidden;
+}
+
+.social-icons a {
+    color: var(--text-color);
+}
+
+.social-icons a:hover, .social-icons a.action {
+    color:var(--other-color);
+    transform: scale(1.1)translateY(-5px);
+}
+
+/*-------------------questions------------------*/
+
+.questions-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 20px 20px 20px;
+}
+
+.questions {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    width: 70%;
+    padding: 40px 40px 30px 40px;
+    margin-bottom: 20px;
+}
+
+.questions span {
+    color: var(--other-color);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.questions p{
+    line-height: 1.7;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.questions li {
+    line-height: 1.7;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.questions a {
+    background-color: rgba(221, 164, 167, 0.5);
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+
+.top-image {
+    position: relative;
+}
+
+.top-image img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    z-index: 10;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.2) 0px 1px 3px -1px;
+}
+
+.text-overlay {
+    position: absolute; /* Posiziona il testo sopra l'immagine */
+    top: 50%; /* Centra il testo verticalmente */
+    left: 50%; /* Centra il testo orizzontalmente */
+    transform: translate(-40%, -45%); /* Centra esattamente */
+    color: var(--other-color); /* Colore del testo */
+    padding: 20px; /* Spaziatura interna */
+}
+
+.text-overlay h3 {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin: 10px 0;
+}
+
+.text-overlay p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+    text-shadow: 2px 2px 5px rgba(213, 170, 170, 0.5);
+
+}
+
+.subtitle {
+    margin-top: 100px;
+    text-align: center;
+}
+
+

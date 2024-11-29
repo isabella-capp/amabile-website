@@ -1,0 +1,67 @@
+h1 {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.questions-wrap {
+    margin-bottom: 100px;
+}
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #c58b82;
+    border: 3px solid var(--other-color);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: rotate(90deg);
+}
+
+.toggle-button.active {
+    transform: rotate(90deg);
+}
+
+
+.toggle-button::after {
+    content: "+"; /* Simbolo iniziale */
+    transition: content 0.3s ease; /* Transizione per il cambio del simbolo */
+}
+
+.toggle-button:hover::after {
+    content: "|"; /* Cambia simbolo durante l'hover */
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.toggle-button.active::after {
+    content: "|"; /* Cambia simbolo quando attivo */
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.answer {
+    margin-top: 10px;
+    display: none; /* Nasconde il contenuto inizialmente */
+    color: #333;
+}
+
+.questions.active .answer {
+    display: block; /* Mostra il contenuto quando il div è attivo */
+}

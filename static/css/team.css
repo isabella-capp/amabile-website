@@ -1,0 +1,35 @@
+.team-presentation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 50px;
+    margin: 50px 0 50px;
+}
+
+.team-member {
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.image-wrapper {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: transform 0.9s ease;
+
+    >img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: relative;
+        object-fit: cover;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

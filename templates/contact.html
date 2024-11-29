@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="top-image">
+        <img src="static/media/decoration.png">
+        <div class="text-overlay">
+            <h3>Contact Us</h3>
+            <p>Questions, issues or comments are all welcome.</p>
+        </div>
+    </div>
+
+    <div class="subtitle">
+        <h2>Hai bisogno di ricevere assistenza?</h2>
+    </div>
+
+
+    <section class="questions-wrap">
+        <div class="questions">
+            <span>Gestisci tutte le richieste dal tuo account</span>
+            <p> Le richieste relative a ordini,spedizioni, resi e prodotti difettosi possono essere
+                gestite direttamente dal <a>tuo account</a>, nella sezione “Resi e Sostituzioni”.
+            </p>
+        </div>
+
+        <div class="questions">
+            <span> Non hai ancora un account?</span>
+            <p><a>Crea un account</a> per gestire le tue richieste in modo più semplice e veloce. </p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="contact-information">
+            <div class="contacts">
+                <h2>Get In Touch</h2>
+                <p>Se hai bisogno di ulteriore assistenza, puoi contattarci:</p>
+                <div class="contact-possibilities">
+                    <div class="icon-circle">
+                        <i class='bx bxl-gmail'></i> <!-- Icona email -->
+                    </div>
+                    <div>
+                        <h3>Inviando una mail all’indirizzo</h3>
+                        <p>info@amabilejewels.it</p>
+                    </div>
+                </div>
+
+                <div class="contact-possibilities">
+                    <div class="icon-circle">
+                        <i class='bx bx-phone'></i> <!-- Icona telefono -->
+                    </div>
+                    <div>
+                        <h3>Telefonando al numero</h3>
+                        <p>+39 3513840657</p>
+                        <p>Dal lunedì al venerdì:</p>
+                        <ul>
+                            <li>dalle ore 8.30 alle ore 12.30</li>
+                            <li>dalle ore 14 alle ore 16</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="static/media/martina1.avif">
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="form-wrapper">
+            <form id="formcontact" onsubmit="submitForm(event)">
+                <div class="field-note">
+                    <span>SCRIVICI</span>
+                    <hr>
+                    <p>Lasciaci una nota e ti risponderemo il più presto possibile.</p>
+                </div>
+
+                <div class="form-section-wrapper">
+                    <div class="form-section">
+                        <label for="name">Nome <span>*</span> </label>
+                        <input id="name" name="name" placeholder="Inserisci il nome" required type="text">
+                    </div>
+                    <div class="form-section">
+                        <label for="email">Email <span>*</span></label>
+                        <input id="email" name="email" placeholder="Inserisci l'email" required type="email">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label for="phonenumber">Numero di telefono<span>*</span></label>
+                    <input id="phonenumber" name="phonenumber" pattern="\d{10}" placeholder="Inserisci il tuo numero di telefono" required
+                           type="text">
+                </div>
+                <div class="form-section">
+                    <label for="description">A che cosa stai pensando? <span>*</span></label>
+                    <textarea id="description" name="description" placeholder="Scrivi qui..." required rows="5"></textarea>
+                </div>
+
+                <div class="form-section">
+                    <label class="checkbox-label" for="check-cookie">
+                        <input id="check-cookie" name="check-cookie" type="checkbox" required>
+                        Ho letto e accetto la Privacy Policy e la Cookie Policy<span>*</span>
+                    </label>
+                </div>
+
+                <div class="form-section">
+                    <button type="submit">INVIA</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        async function submitForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phonenumber').value;
+            const description = document.getElementById('description').value;
+
+            console.log(name);
+            console.log(email);
+            console.log(phone);
+            console.log(description);
+
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({name, email, phone, description})
+            });
+
+            const result = await response.json()
+            if(response.ok){
+                alert("Contact added succesfully");
+            }else {
+                alert(`Error: ${result.error}`);
+            }
+        }
+    </script>
+{% endblock %}

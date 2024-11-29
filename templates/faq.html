@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+{% block title %}FAQ{% endblock %}
+{% block content %}
+    <h1>FAQ</h1>
+    <section class="questions-wrap">
+        {% for question in question_information %}
+              <div class="questions">
+                    <div class="question-header">
+                        <span>{{ question.title }}</span>
+                        <button class="toggle-button"></button>
+                    </div>
+                    <div class="answer">
+                        {{ question.paragraph|safe }}
+                    </div>
+                </div>
+        {% endfor %}
+    </section>
+
+    <script>
+    document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const questionContainer = button.closest('.questions');
+
+                // Toggle stato attivo
+                questionContainer.classList.toggle('active');
+                button.classList.toggle('active');
+            });
+        });
+    </script>
+{% endblock %}

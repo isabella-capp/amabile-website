@@ -1,0 +1,147 @@
+.top-image {
+    position: relative;
+}
+
+.top-image img {
+    display: block;
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
+    object-position: 50% 49%;
+
+    z-index: 10;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.2) 0px 1px 3px -1px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 70%; /* Centra il testo verticalmente */
+    left: 50%; /* Centra il testo orizzontalmente */
+    transform: translate(-50%, -50%); /* Centra esattamente */
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-overlay h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.text-overlay p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.text-overlay button {
+    border: 3px solid white;
+    color: white;
+    border-radius: 25px;
+    background-color: transparent;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 14px 30px;
+    transition: background-color 0.9s ease;
+}
+
+.text-overlay button:hover {
+    background-color: #880707;
+    border: #880707;
+}
+
+.jewellery {
+    margin: 50px 20px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 30px;
+}
+
+.image-wrapper {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.image-wrapper img {
+    width: 100%; /* Occupa tutta la larghezza del contenitore */
+    height: 100%; /* Occupa tutta l'altezza del contenitore */
+    object-fit: cover; /* Copre il contenitore senza deformarsi */
+    transition: transform 0.6s ease;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.1);
+}
+
+.image-description {
+    font-weight: 600;
+    text-align: center;
+}
+
+.story-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--secondary-color);
+    margin-bottom: 150px;
+    height: 500px;
+}
+
+.img-story {
+    flex: 5;
+    overflow: hidden;
+}
+
+.story-wrapper img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 60%;
+    transition: transform 0.5s ease;
+}
+
+.story-wrapper img:hover{
+    transform: scale(1.15);
+}
+
+.story{
+    flex: 5;
+    padding: 100px;
+}
+
+.story h1 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.story p {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.story button {
+    border: 2px solid var(--other-color);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.9s ease;
+
+    >a {
+        text-decoration: none;
+        color: var(--other-color);
+    }
+}
+
+.story button:hover {
+    background-color: var(--other-color);
+    >a {
+        color: white;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>{% block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    {% if css_file is not none %}
+        <link rel="stylesheet" href="{{ url_for('static', filename=css_file) }}">
+    {% endif %}
+
+</head>
+<body>
+<div class="page-wrapper">
+    <header class="nav-wrapper">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='media/logo.png') }}" alt="Logo">
+            </div>
+            <div class="nav-links">
+                <a href="/" {% if request.path=='/' %} class="active"{% endif %}>Home</a>
+                <a href="/about" {% if request.path=='/about' %} class="active" {% endif %}>About</a>
+                <a href="/contact" {% if request.path=='/contact' %} class="active" {% endif %}>Contact</a>
+                <a href="/team" {% if request.path=='/team' %} class="active" {% endif %}>Team</a>
+            </div>
+            <div class="log-in">
+                <i class='bx bx-user'></i>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-menu">
+            <h3>About us</h3>
+            <a href="/about">Chi siamo</a>
+
+            <div class="social-icons">
+                <a href="https://www.tiktok.com/@team_amabile" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                <a href="https://www.instagram.com/amabile_jewels/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com/amabilejewels.it" target="_blank"><i class='bx bxl-facebook'></i></a>
+            </div>
+        </div>
+
+        <div class="footer-menu">
+            <h3>Assistenza</h3>
+            <a href="/contact">Contatti</a>
+            <a>Resi</a>
+            <a href="/faq">FAQ</a>
+            <a>Guida alle taglie</a>
+        </div>
+
+        <div class="footer-menu">
+            <h3>Area Legale</h3>
+            <a>Cookie policy</a>
+            <a>Privacy policy</a>
+            <a>Termini e condizioni</a>
+            <a>Gestione cookie</a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,233 @@
+.questions-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 20px 20px 20px;
+}
+
+.questions {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    width: 70%;
+    padding: 40px 40px 30px 40px;
+    margin-bottom: 20px;
+}
+
+.questions span {
+    color: var(--other-color);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.questions p {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.questions a {
+    background-color: rgba(221, 164, 167, 0.5);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 20px 20px;
+}
+
+.contact-information {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.image-wrapper {
+    width: 350px;
+    border-radius: 20px;
+}
+
+.image-wrapper img{
+    width: 350px;
+    border-radius: 30px;
+}
+
+.contacts {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    width: 70%;
+    padding-left: 60px;
+    padding-top: 20px;
+    height: 436.89px;
+    align-items: center;
+}
+
+.contact-possibilities {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact-possibilities h3 {
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+
+.contact-possibilities li, .contact-possibilities ul {
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.icon-circle {
+    width: 50px; /* Dimensione del cerchio */
+    height: 50px; /* Dimensione del cerchio */
+    border: 3px solid #d8a79c; /* Colore del bordo */
+    border-radius: 50%; /* Trasforma il contenitore in un cerchio */
+    display: flex; /* Per centrare l'icona */
+    align-items: center; /* Centra l'icona verticalmente */
+    justify-content: center; /* Centra l'icona orizzontalmente */
+}
+
+.icon-circle i {
+    font-size: 30px; /* Dimensione dell'icona */
+    color: var(--other-color); /* Colore dell'icona */
+}
+
+.form-wrapper {
+    background-color: var(--primary-color);
+    padding: 30px 30px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    border: 2px solid var(--other-color);
+    margin-bottom: 100px;
+}
+
+.field-note {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.field-note span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--other-color);
+}
+
+.field-note hr {
+    border: 1px solid var(--other-color);
+    margin: 15px auto 20px;
+    /* width: 50%;*/
+}
+
+.field-note p {
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.form-section-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+label span {
+    color: #cd0303;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+#proposal {
+    height: 60px;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    border: 1px solid var(--other-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--other-color);
+    box-shadow: 0 0 5px var(--other-color);
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle; /* Allinea la checkbox verticalmente al testo */
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    cursor: pointer; /* Aggiunge un cursore puntatore per migliorare l'usabilità */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--other-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: rgba(221, 164, 167, 0.8);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--other-color);
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid var(--other-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    resize: vertical; /* Permette di ridimensionare solo in altezza */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+textarea:focus {
+    outline: none;
+    border-color: var(--other-color);
+    box-shadow: 0 0 5px var(--other-color);
+}
+
