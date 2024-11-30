@@ -89,7 +89,12 @@ body, html {
     height: 25px;
     border-radius: 100%;
     transition: all 500ms ease;
+    color: black;
     backface-visibility: hidden;
+}
+
+a {
+    text-decoration: none;
 }
 
 .content {
@@ -242,4 +247,170 @@ body, html {
     text-align: center;
 }
 
+.form-container {
+    background-color: var(--primary-color);
+    padding: 30px 30px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    border: 2px solid var(--other-color);
+    margin-bottom: 100px;
 
+    >h2{
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--other-color);
+        margin-bottom: 0;
+    }
+
+    >form {
+        >button {
+            padding: 10px 20px;
+            background-color: var(--other-color);
+            border: 3px solid var(--other-color);
+            border-radius: 5px;
+            color: var(--primary-color);
+            transition: background-color 0.6s ease;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+
+            &:hover {
+                background-color: rgba(255, 236, 238, 0.73);
+                border: 3px solid var(--other-color);
+                color: var(--other-color);
+            }
+        }
+    }
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: left;
+    flex:1;
+
+    >label {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        color: var(--text-color);
+
+        >span {
+            color: #cd0303;
+        }
+    }
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    border: 1px solid var(--other-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--other-color);
+    box-shadow: 0 0 5px var(--other-color);
+}
+
+.field-note {
+    text-align: center;
+    margin-bottom: 30px;
+
+    >span{
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--other-color);
+    }
+
+    >hr {
+        border: 1px solid var(--other-color);
+        margin: 15px auto 20px;
+    }
+
+    >p{
+        text-align: left;
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+}
+
+.form-section-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+#proposal {
+    height: 60px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle; /* Allinea la checkbox verticalmente al testo */
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    cursor: pointer; /* Aggiunge un cursore puntatore per migliorare l'usabilità */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--other-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: rgba(221, 164, 167, 0.8);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--other-color);
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid var(--other-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    resize: vertical; /* Permette di ridimensionare solo in altezza */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--other-color);
+    box-shadow: 0 0 5px var(--other-color);
+}
+
+.log-in-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 100px 0 100px;
+}

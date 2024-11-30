@@ -8,6 +8,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', css_file='css/index.css')
 
+@app.route('/auth')
+def auth():
+    return render_template('auth.html')
+
 @app.route('/about')
 def about():
     return render_template('about.html', css_file='css/about.css')
