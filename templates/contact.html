@@ -109,35 +109,4 @@
             </form>
         </div>
     </section>
-
-    <script>
-        async function submitForm(event) {
-            event.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phonenumber').value;
-            const description = document.getElementById('description').value;
-
-            console.log(name);
-            console.log(email);
-            console.log(phone);
-            console.log(description);
-
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({name, email, phone, description})
-            });
-
-            const result = await response.json()
-            if(response.ok){
-                alert("Contact added succesfully");
-            }else {
-                alert(`Error: ${result.error}`);
-            }
-        }
-    </script>
 {% endblock %}
