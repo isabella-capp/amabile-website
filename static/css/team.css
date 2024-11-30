@@ -1,35 +1,117 @@
-.team-presentation{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    column-gap: 50px;
-    margin: 50px 0 50px;
+.team-section {
+    padding: 4rem 2rem;
+    background-color: var(--primary-color);
 }
+
+.team-header {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    >h1{
+        text-shadow: 2px 3px 3px rgba(0,0,0,0.2);
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+    }
+    >h3{
+        font-size: 1.5rem;
+        color: var(--other-color);
+        margin: 0 0 1.5rem;
+    }
+    >p{
+        font-size: 1.2rem;
+        color: var(--text-color);
+        opacity: 0.8;
+        margin-bottom: 2rem;
+        line-height: 1.7;
+    }
+}
+
+.btn-filled {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+    background: var(--other-color);
+    border: 2px solid var(--other-color);
+    color: white;
+    font-weight: bold;
+    &:hover{
+        background-color: transparent;
+        color: var(--other-color);
+    }
+}
+
+.team-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.team-scroll {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 2rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.team-scroll::-webkit-scrollbar {
+    display: none;
+}
+
 
 .team-member {
-    padding: 20px;
-    border-radius: 24px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    flex: 0 0 auto;
+    width: 280px;
+    text-align: center;
+    scroll-snap-align: start;
+    background: var(--secondary-color);
+    border-radius: 5px;
+    padding: 2rem 1rem 1rem;
+    transition: transform 0.3s ease;
+
+    >h3{
+        color: var(--text-color);
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    >p {
+    color: var(--text-color);
+    opacity: 0.7;
+    font-size: 0.9rem;
+    }
+    &:hover {
+         transform: translateY(-5px);
+    }
 }
 
-.image-wrapper {
+.team-member img {
     width: 200px;
     height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
-    transition: transform 0.9s ease;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
 
-    >img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        position: relative;
-        object-fit: cover;
 
-        &:hover {
-            transform: scale(1.1);
-        }
+@media (max-width: 768px) {
+    .team-header h1 {
+        font-size: 2rem;
+    }
+
+    .team-member {
+        width: 240px;
+    }
+
+    .team-member img {
+        width: 180px;
+        height: 180px;
     }
 }

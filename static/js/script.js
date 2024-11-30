@@ -52,7 +52,12 @@ async function submitForm(event) {
 
             const result = await response.json()
             if(response.ok){
-                alert("Contact added succesfully");
+                alert("Contact added successfully");
+
+                document.getElementById('name').value = "";
+                document.getElementById('email').value = "";
+                document.getElementById('phonenumber').value = "";
+                document.getElementById('description').value = "";
             }else {
                 alert(`Error: ${result.error}`);
             }

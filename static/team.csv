@@ -1,4 +1,8 @@
-name,position,email,image
-Martina Strazzer,CEO,martina.strazzer@gmail.com,media/persona1.jpeg
-Martina Strazzer,Web Developer,martina.strazzer@gmail.com,media/persona1.jpeg
-Martina Strazzer,Web Developer,martina.strazzer@gmail.com,media/persona1.jpeg
+name,position,image
+Martina Strazzer,CEO,media/persona1.jpeg
+Giulia Rossi,Direttrice Creativa,media/persona1.jpeg
+Marco Ferrari,Responsabile Vendite,media/persona1.jpeg
+Elena Verdi,Designer di Gioielli,media/persona1.jpeg
+Sara Neri,Specialista Marketing,media/persona1.jpeg
+Matteo Conti,Responsabile Logistica,media/persona1.jpeg
+Alice Galli,Consulente Clienti,media/persona1.jpeg

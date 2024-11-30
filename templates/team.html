@@ -1,30 +1,31 @@
-
 {% extends "base.html" %}
 
 {% block content %}
-     <div class="top-image">
-        <img src="static/media/decoration.png">
-        <div class="text-overlay">
-            <h3>Our Team</h3>
-            <p>Passion and Dedication at Your Service</p>
+
+<section class="team-section">
+    <div class="team-header">
+        <h1>Incontra il nostro splendido team</h1>
+        <h3>Passione e dedizione al tuo servizio</h3>
+        <p>La nostra filosofia è semplice: assumere persone straordinarie e fornire loro le risorse e il supporto necessari per svolgere al meglio il proprio lavoro.</p>
+        <a href="/contact#scrivici">
+            <button class="btn-filled">CONTATTACI</button>
+        </a>
+    </div>
+
+    <div class="team-container">
+        <div class="team-scroll">
+            {% for member in team_members %}
+                <div class="team-member">
+                    <div class="image-wrapper">
+                        <img src="{{ url_for('static', filename=member.image) }}" alt="{{ member.name }}">
+                    </div>
+
+                    <p><strong>{{ member.name }}</strong></p>
+                    <p>{{ member.position }}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
+</section>
 
-    <div class="subtitle">
-        <h2>Pronto a scoprire chi c'è dietro Amabile?</h2>
-    </div>
-
-    <div class="team-presentation">
-        {% for member in team_members %}
-            <div class="team-member">
-                <div class="image-wrapper">
-                    <img src="{{ url_for('static', filename=member.image) }}" alt="{{ member.name }}">
-                </div>
-
-                <p>{{ member.name }}</p>
-                <p>{{ member.position }}</p>
-                <p>{{ member.email }}</p>
-            </div>
-        {% endfor %}
-    </div>
 {% endblock %}
