@@ -18,7 +18,7 @@
                 <img src="{{ url_for('static', filename='media/logo.png') }}" alt="Logo">
             </div>
             <div class="nav-links">
-                <a href="/" {% if request.path=='/' %} class="active"{% endif %}>Home</a>
+                <a href="/" {% if request.path=='/' %} class="active" {% endif %}>Home</a>
                 <a href="/about" {% if request.path=='/about' %} class="active" {% endif %}>About</a>
                 <a href="/contact" {% if request.path=='/contact' %} class="active" {% endif %}>Contact</a>
                 <a href="/team" {% if request.path=='/team' %} class="active" {% endif %}>Team</a>

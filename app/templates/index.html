@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <section>
+        <div class="top-image">
+            <img src="static/media/home-page.jpg">
+            <div class="text-overlay">
+                <h1>Christmas Capsule</h1>
+                <p>Sparkle up your holidays</p>
+                <button>VAI ALLA COLLEZIONE</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="jewellery">
+            {% for jewellery in data %}
+                <div class="section">
+                    <div class="image-wrapper">
+                        <img src="{{ url_for('static', filename=jewellery.image_path) }}" alt="{{ jewellery.name }}">
+                    </div>
+                    <div class="image-description">
+                        {{ jewellery.name }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+</section>
+
+    <section>
+        <div class="story-wrapper">
+            <div class="img-story">
+                <img src="static/media/home-img.png">
+            </div>
+            <div class="story">
+                <h1> LA STORIA DI AMABILE </h1>
+                <p> Quella di Amabile e di Martina Strazzer, CEO e Founder, è una bellissima storia di determinazione, che ci insegna che non sempre la strada già tracciata è quella giusta, e che per raggiungere i propri obiettivi bisogna avere il coraggio di mettersi in gioco.</p>
+                <button><a href="/about#nascita">SCOPRI DI PIU</a></button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+{% endblock %}
