@@ -1,46 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="log-in-page">
-    <div class="form-wrapper">
-        <div class="form-container">
-            <form id="formcontact" onsubmit="submitForm(event)">
-                <div class="field-note">
-                    <span>SIGN IN</span>
-                    <hr>
-                    <p>Se hai un account, accedi con il tuo indirizzo email.</p>
-                </div>
-
-                <div class="form-section">
-                    <label for="email">Email <span>*</span></label>
-                    <input id="email" name="email" placeholder="Inserisci l'email" required type="email">
-                </div>
-
-                <div class="form-section">
-                    <label for="password">Password <span>*</span></label>
-                    <input id="password" name="password" placeholder="Inserisci la password" required type="text">
-                </div>
-
-                <div class="form-section">
-                    <label class="checkbox-label" for="show-password">
-                        <input id="show-password" name="show-password" type="checkbox" required>
-                        Mostra password
-                    </label>
-                </div>
-
-                <div class="form-section">
-                    <button type="submit" class="submit">SIGN IN</button>
-                </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>CREA UN ACCOUNT</h1>
+                <label>Nome</label>
+                <input placeholder="Name" type="text">
+                <label>Email</label>
+                <input placeholder="Email" type="email">
+                <label>Password</label>
+                <input placeholder="Password" type="password">
+                <button type="button">Sign Up</button>
             </form>
         </div>
-        <div class="registration-section">
-            <div class="field-note">
-                <h2>Non hai ancora un account?</h2>
-                <p>La creazione di un account ha molti vantaggi: check-out veloce, salvare più di un indirizzo, tenere traccia degli ordini e altro ancora.</p>
-                <div class="form-section">
-                    <button class="submit">REGISTRATI</button>
+        <div class="form-container sign-in">
+            <form>
+                <h1>SIGN IN</h1>
+                <label>Email</label>
+                <input placeholder="Email" type="email">
+                <label>Password</label>
+                <input placeholder="Password" type="password">
+                <a class="forgot" href="#"><span>HAI DIMENTICATO LA PASSWORD</span>? </a>
+                <button type="button">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>BENTORNATO!</h1>
+                    <p>Se hai un account, accedi con il tuo indirizzo email.</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>REGISTRATI</h1>
+                    <p>La creazione di un account ha molti vantaggi: check-out veloce, salvare più di un indirizzo, tenere traccia degli ordini e altro ancora.</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/your-kit-code.js"></script>
 {% endblock %}

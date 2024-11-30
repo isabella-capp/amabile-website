@@ -10,7 +10,7 @@ def index():
 
 @app.route('/auth')
 def auth():
-    return render_template('auth.html')
+    return render_template('auth.html', css_file='css/auth.css')
 
 @app.route('/about')
 def about():
