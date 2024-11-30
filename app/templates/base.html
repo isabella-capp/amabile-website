@@ -42,9 +42,9 @@
             <h2>ISCRIVITI ALLA NOSTRA NEWSLETTER</h2>
             <p>Riceverai un codice sconto del valore di 5€ da utilizzare su una spesa minima di 70€.</p>
 
-            <form class="newsletter-form">
+            <form class="newsletter-form" onsubmit="submitFormNewsletter(event)">
                 <div class="input-group">
-                    <input type="email" placeholder="La tua mail migliore" required>
+                    <input type="email" id="email" placeholder="La tua mail migliore" required>
                     <button type="submit">MI ISCRIVO</button>
                 </div>
 

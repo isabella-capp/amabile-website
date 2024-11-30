@@ -29,36 +29,57 @@ signInButton.addEventListener('click', () => {
  * @param {Event} event - The submit event triggered by the form submission.
  */
 
-async function submitForm(event) {
-            event.preventDefault();
+async function submitFormContact(event) {
+        event.preventDefault();
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phonenumber').value;
-            const description = document.getElementById('description').value;
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phonenumber').value;
+        const description = document.getElementById('description').value;
 
-            console.log(name);
-            console.log(email);
-            console.log(phone);
-            console.log(description);
+        console.log(name);
+        console.log(email);
+        console.log(phone);
+        console.log(description);
 
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({name, email, phone, description})
-            });
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({name, email, phone, description})
+        });
 
-            const result = await response.json()
-            if(response.ok){
-                alert("Contact added successfully");
+        const result = await response.json()
+        if(response.ok){
+            alert("Contact added successfully");
 
-                document.getElementById('name').value = "";
-                document.getElementById('email').value = "";
-                document.getElementById('phonenumber').value = "";
-                document.getElementById('description').value = "";
-            }else {
-                alert(`Error: ${result.error}`);
-            }
+            document.getElementById('name').value = "";
+            document.getElementById('email').value = "";
+            document.getElementById('phonenumber').value = "";
+            document.getElementById('description').value = "";
+        }else {
+            alert(`Error: ${result.error}`);
         }
+    }
+
+    async function submitFormNewsletter(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+
+        const response = await fetch('/api/newsletter', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({email})
+        });
+
+        const result = await response.json()
+        if(response.ok){
+            alert("Email contact added successfully");
+            document.getElementById('email').value = "";
+        }else {
+            alert(`Error: ${result.error}`);
+        }
+    }
