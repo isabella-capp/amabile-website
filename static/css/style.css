@@ -247,14 +247,23 @@ a {
     text-align: center;
 }
 
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--other-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+    width: 50%;
+    border-radius: 14px;
+}
+
 .form-container {
     background-color: var(--primary-color);
+    width: 70%;
     padding: 30px 30px 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    border: 2px solid var(--other-color);
-    margin-bottom: 100px;
+    border-radius: 10px 10px 0 0;
 
     >h2{
         font-size: 1.5rem;
@@ -262,33 +271,12 @@ a {
         color: var(--other-color);
         margin-bottom: 0;
     }
-
-    >form {
-        >button {
-            padding: 10px 20px;
-            background-color: var(--other-color);
-            border: 3px solid var(--other-color);
-            border-radius: 5px;
-            color: var(--primary-color);
-            transition: background-color 0.6s ease;
-            font-size: 1rem;
-            cursor: pointer;
-            width: 100%;
-            font-weight: 600;
-
-            &:hover {
-                background-color: rgba(255, 236, 238, 0.73);
-                border: 3px solid var(--other-color);
-                color: var(--other-color);
-            }
-        }
-    }
 }
 
 .form-section {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: left;
     flex:1;
 
@@ -321,12 +309,17 @@ input[type="email"]:focus {
 
 .field-note {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     >span{
         font-size: 1.5rem;
         font-weight: 600;
         color: var(--other-color);
+    }
+
+    >h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
     }
 
     >hr {
@@ -337,7 +330,21 @@ input[type="email"]:focus {
     >p{
         text-align: left;
         font-size: 0.9rem;
+        line-height: 1.7;
         color: var(--text-color);
+    }
+}
+
+.registration-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 10px 30px 10px;
+    border-radius: 0 0 10px 10px;
+
+    >div {
+        width: 70%;
     }
 }
 
@@ -413,4 +420,23 @@ textarea:focus {
     text-align: center;
     min-height: 100vh;
     padding: 100px 0 100px;
+}
+
+.submit {
+        padding: 10px 20px;
+        background-color: var(--other-color);
+        border: 3px solid var(--other-color);
+        border-radius: 5px;
+        color: var(--primary-color);
+        transition: background-color 0.6s ease;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 100%;
+        font-weight: 600;
+
+        &:hover {
+            background-color: rgba(255, 236, 238, 0.73);
+            border: 3px solid var(--other-color);
+            color: var(--other-color);
+        }
 }
