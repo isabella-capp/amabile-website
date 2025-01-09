@@ -38,8 +38,8 @@ This project involves the creation of the **Amabile Jewels** website, developed 
 ### Main Pages  
 - **Home**: Introduction to the brand and access to main sections  
 - **About Us**: Highlights the history, values, and team of Amabile Jewels  
-- **Contacts**: Displays available jewelry pieces  
-- **Team**: Showcases initiatives and interaction with the community  
+- **Contacts**: Page to keep in contact with the brand  
+- **Team**: Shows the team behind Amabile Jewels  
 
 ### Improvements Implemented  
 - **Updated Design**: Modern CSS styling for a more attractive and responsive layout.  
